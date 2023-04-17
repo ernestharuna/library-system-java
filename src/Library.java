@@ -1,36 +1,41 @@
 abstract class Library {
     // features || attributes
-    private String author;
-    private String publisher;
-    private int item_code;
-    private int year;
+    protected String publisher;
+    protected String title;
+    protected int year;
+    protected int item_id;
 
-    public Library(String check_in, String check_out, int item_code) {
-        this.author = check_in;
-        this.publisher = check_out;
-        this.item_code = item_code;
-    }
-
-    public String getAuthor() {
-        return this.author;
+    public Library(String publisher, String title, int item_id, int year) {
+        this.publisher = publisher;
+        this.title = title;
+        this.year = year;
+        this.item_id = item_id;
     }
 
     public String getPublisher() {
         return this.publisher;
     }
 
-    public int item_code() {
-        return item_code;
+    public String getTitle() {
+        return this.title;
     }
 
     public int getYear() {
         return this.year;
     }
 
+    public int getItem_id() {
+        return this.item_id;
+    }
+
     // abstract methods
     public abstract String toString();
 
-    public abstract void check_in();
+    public void check_in() {
+        System.out.println("Something was returned");
+    };
 
-    public abstract void check_out();
+    public void check_out() {
+        System.out.println("Something was borrowed");
+    };
 }
