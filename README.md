@@ -17,7 +17,7 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 
 The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
 
-## Instruction 
+## Instructions
 
 Write a Java program using inheritance(specifically abstract class) to simulate a library management system, where there are different types of library resources (e.g., books, magazines, DVDs), and each resource has its own unique features (e.g., author, publisher, release date).
 
