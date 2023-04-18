@@ -11,11 +11,11 @@ public class Magazine extends Library {
     }
 
     public void check_in() {
-        System.out.println("A Magazine was returned");
+        System.out.println("A Magazine named " + title + " was returned");
     }
 
     public void check_out() {
-        System.out.println("A Magazine was taken");
+        System.out.println("A Magazine named " + title + " was taken");
     }
 
     public String toString() {

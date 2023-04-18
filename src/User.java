@@ -27,7 +27,7 @@ public class User {
             System.out.println(borrow_history);
             return new ArrayList<Integer>();
         } else {
-            System.out.println("You have borrowed these books " + borrow_history);
+            System.out.println("Item codes of your pending items " + borrow_history);
             return borrow_history;
         }
     }
