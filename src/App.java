@@ -1,10 +1,13 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Welcome!");
-        User user = new User("Ernest", 0);
+        User user = new User("Ernest", 456); // User Instance
+        System.out.println(user); // New User assigned
 
-        System.out.println(user);
-
-        user.borrow_resource(null);
+        Book res = new Book("Ernest", "ABU_DLC", "How to get rich", 137, 2014); // Book Instance
+        user.borrow_resource(res); // Borrow a book
+        user.borrow_resource(res); // Borrow a book
+        user.borrow_resource(res); // Borrow a book
+        user.get_history();
+        // user.return_resource(137, res);
     }
 }

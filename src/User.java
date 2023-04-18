@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class User {
     private String name;
     private int user_id;
-    private ArrayList<Library> borrow_history;
+    private ArrayList<Integer> borrow_history;
 
     public User(String name_1, int id) {
         this.name = name_1;
@@ -12,17 +12,24 @@ public class User {
     }
 
     public void borrow_resource(Library resource) {
-        borrow_history.add(resource);
+        borrow_history.add(resource.item_id);
         resource.check_out();
     }
 
-    public void return_resource(Library resource) {
-        borrow_history.remove(resource);
+    public void return_resource(int res_num, Library resource) {
+        int index = borrow_history.indexOf(res_num);
+        borrow_history.remove(index);
         resource.check_in();
     }
 
-    public ArrayList<Library> get_history() {
-        return borrow_history;
+    public ArrayList<Integer> get_history() {
+        if (borrow_history.isEmpty()) {
+            System.out.println(borrow_history);
+            return new ArrayList<Integer>();
+        } else {
+            System.out.println("You have borrowed these books " + borrow_history);
+            return borrow_history;
+        }
     }
 
     public String getName() {
@@ -34,6 +41,6 @@ public class User {
     }
 
     public String toString() {
-        return "User name is " + name + " and user ID is " + user_id;
+        return "Welcome " + name + " your user ID is " + user_id;
     }
 }

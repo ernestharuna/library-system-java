@@ -6,12 +6,16 @@ public class Book extends Library {
         this.author = author;
     }
 
+    public String getAuthor() {
+        return this.author;
+    }
+
     public void check_in() {
-        System.out.println("A book was returned");
+        System.out.println("A book named " + title + " was returned");
     }
 
     public void check_out() {
-        System.out.println("A book was taken");
+        System.out.println("A book named " + title + " was taken");
     }
 
     public String toString() {
