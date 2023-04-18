@@ -11,6 +11,7 @@ public class User {
         this.borrow_history = new ArrayList<>();
     }
 
+    // User methods
     public void borrow_resource(Library resource) {
         borrow_history.add(resource.item_id);
         resource.check_out();
@@ -32,6 +33,7 @@ public class User {
         }
     }
 
+    // User Getters
     public String getName() {
         return this.name;
     }
