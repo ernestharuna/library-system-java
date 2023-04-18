@@ -8,6 +8,8 @@ public class App {
         user.borrow_resource(res); // Borrow a book
         user.borrow_resource(res); // Borrow a book
         user.get_history();
-        // user.return_resource(137, res);
+        user.return_resource(137, res);
+        user.get_history();
+
     }
 }
